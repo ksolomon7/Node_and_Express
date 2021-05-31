@@ -3,4 +3,5 @@ const getNotes=require('./notes')
 
 const notes=getNotes()
 console.log(notes);
-console.log(validator.isEmail('kalk@gmail.com'))
+
+console.log(validator.isURL("www.google.com"));
