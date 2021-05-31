@@ -5,5 +5,5 @@
 const fs= require('fs')
 fs.writeFileSync('notes.txt', 'My name is Robot')
 
-//the writeFile and writeFilesync allows you to add data to a file
+//the writeFile and writeFilesync function allows data to be updated or changed in a file
 
