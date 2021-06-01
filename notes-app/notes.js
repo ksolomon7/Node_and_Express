@@ -1,9 +1,6 @@
 const fs=require('fs')
 const chalk=require('chalk')
 const { showCompletionScript } = require('yargs')
-const getNotes=()=>{
-    return "Your notes..."
-}
 
 const addNote=(title, body)=>{
    const notes=loadNotes() 
