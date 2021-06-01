@@ -1,7 +1,8 @@
-const validator=require('validator')
+const chalk=require('chalk')
 const getNotes=require('./notes')
 
 const notes=getNotes()
 console.log(notes);
 
-console.log(validator.isURL("www.google.com"));
+const successMsg=chalk.green("Success!")
+console.log(successMsg);
