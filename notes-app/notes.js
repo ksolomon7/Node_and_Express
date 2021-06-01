@@ -1,4 +1,5 @@
 const fs=require('fs')
+const chalk=require('chalk')
 const { showCompletionScript } = require('yargs')
 const getNotes=()=>{
     return "Your notes..."
@@ -21,12 +22,13 @@ const addNote=function(title, body){
 //function removing notes
 const removeNote=function(title){
     const notes=loadNotes();
+    
     const filteredNote=notes.filter(note=>note.title!==title)
-    if(filteredNote.length===0){
-        console.log("Note was not found")
-    }else{
-        const noteJson=JSON.stringify(filteredNote)
-        fs.writeFileSync('notes.json',noteJson)
+    saveNotes(filteredNote)
+    if(notes.length>filteredNote.length){
+        console.log(chalk.green.inverse("Note removed")) 
+    }else{ 
+        console.log(chalk.red.inverse("No note found!"))
     }
 }
 
